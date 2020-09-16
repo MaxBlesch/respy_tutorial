@@ -1,0 +1,19 @@
+# Ignore folders.
+.cache/
+.hypothesis/
+.idea/
+.ipynb_checkpoints/
+.tox/
+.vscode/
+__pycache__/
+__tutorial__/
+dist/
+docs/_build/
+docs/_generated/
+
+# Ignore files.
+.coverage
+pytestdebug.log
+*.sublime-project
+*.sublime-workspace
+*.egg-info
