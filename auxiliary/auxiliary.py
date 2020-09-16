@@ -4,19 +4,27 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def plot_choice_shares(df):
+def plot_choice_shares(df, friday=False):
+    if friday:
+        color = ["C0", "C2", "C1"]
+        choices = 3
+    else:
+        color = ["C0", "C1"]
+        choices = 2
+
     fig, ax = plt.subplots()
 
     df.groupby("Period").Choice.value_counts(normalize=True).unstack().plot.bar(
-        stacked=True, ax=ax
+        stacked=True, ax=ax, color=color
     )
 
     plt.xticks(rotation="horizontal")
 
-    plt.legend(loc="lower center", bbox_to_anchor=(0.5, -0.275), ncol=2)
+    plt.legend(loc="lower center", bbox_to_anchor=(0.5, -0.275), ncol=choices)
 
     plt.show()
     plt.close()
+
 
 def plot_choice_prob_and_exp_level(df, friday=False):
 
@@ -26,7 +34,7 @@ def plot_choice_prob_and_exp_level(df, friday=False):
         df.groupby("Period")
         .Choice.value_counts(normalize=True)
         .unstack()
-        .plot.bar(ax=axs[0], color = colors, stacked=True, rot=0, title="Choice Probabilities")
+        .plot.bar(ax=axs[0], stacked=True, rot=0, title="Choice Probabilities")
     )
 
     (
@@ -43,8 +51,7 @@ def plot_choice_prob_and_exp_level(df, friday=False):
     )
     
     
-    axs[0].legend(
-       label , loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2
+    axs[0].legend(loc="lower center", bbox_to_anchor=(0.5, -0.4), ncol=2
     )
     axs[1].legend(loc="right", bbox_to_anchor=(1.3, 0.5), ncol=1, title="Experience")
 
