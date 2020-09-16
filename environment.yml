@@ -1,4 +1,4 @@
-name: respy
+name: respy_tutorial
 channels:
   - opensourceeconomics
   - conda-forge
