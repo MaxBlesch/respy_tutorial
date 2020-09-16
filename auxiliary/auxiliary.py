@@ -3,6 +3,21 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
+def plot_choice_shares(df):
+    fig, ax = plt.subplots()
+
+    df.groupby("Period").Choice.value_counts(normalize=True).unstack().plot.bar(
+        stacked=True, ax=ax
+    )
+
+    plt.xticks(rotation="horizontal")
+
+    plt.legend(loc="lower center", bbox_to_anchor=(0.5, -0.275), ncol=2)
+
+    plt.show()
+    plt.close()
+
 def plot_choice_prob_and_exp_level(df, friday=False):
 
     fig, axs = plt.subplots(1, 2, figsize=(14, 5))
