@@ -4,6 +4,7 @@
 .idea/
 .ipynb_checkpoints/
 .tox/
+.respy/
 .vscode/
 __pycache__/
 __tutorial__/
