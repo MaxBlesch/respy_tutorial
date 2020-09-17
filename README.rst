@@ -9,7 +9,7 @@
 
 |
 
-This is a short introduction to respy for new users. As economists love Robinsonades 1, we will showcase the implementation of a Robinson Crusoe economy as a discrete choice dynamic programming model. Throughout the notebook you find indented texts which make you familiar with Robinson’s story. We will first set the scene with a broad introduction and then turn to the precise model specification. We continue by simulating the model and analyze its comparative statics. 
+This is a short introduction to respy for new users. As economists love Robinsonades, we will showcase the implementation of a Robinson Crusoe economy as a discrete choice dynamic programming model. Throughout the notebook you find indented texts which make you familiar with Robinson’s story. We will first set the scene with a broad introduction and then turn to the precise model specification. We continue by simulating the model and analyze its comparative statics. 
 
 Supported by
 ------------
