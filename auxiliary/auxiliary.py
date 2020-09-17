@@ -4,6 +4,23 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
+def plot_fishing_grounds(df):
+    fig, ax = plt.subplots(1, 2, figsize=(14, 5))
+
+    for i, observable in enumerate(["rich", "poor"]):
+        df.query("Fishing_Grounds == @observable").groupby(
+            "Period").Choice.value_counts(
+            normalize=True,
+        ).unstack().plot.bar(width=0.4, stacked=True, rot=0, legend=False, ax=ax[i])
+        ax[i].set_title("Fishing grounds: " + observable, pad=10)
+        ax[i].xaxis.label.set_visible(False)
+
+    plt.legend(loc="lower center", bbox_to_anchor=(-0.15, -0.3), ncol=2)
+    plt.suptitle("Robinson's choices by period", y=1.05)
+
+    plt.show()
+
+
 def plot_choice_shares(df, friday=False):
     if friday:
         color = ["C0", "C2", "C1"]
