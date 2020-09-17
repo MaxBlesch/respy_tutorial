@@ -1,7 +1,7 @@
 .. |logo| image:: https://raw.githubusercontent.com/OpenSourceEconomics/ose-corporate-design/master/logos/OSE_logo_no_type_RGB.svg
    :height: 25px
 
-|logo| respy Tutorial
+|logo| respy tutorial
 ====================
 
 .. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
