@@ -1,6 +1,6 @@
 category,name,value
 delta,delta,0.95
-wage_fishing,exp_fishing,0.15
+wage_fishing,exp_fishing,0.1
 wage_fishing,contemplation_with_friday,0.4
 nonpec_fishing,constant,-1.0
 nonpec_friday,constant,-1.0
